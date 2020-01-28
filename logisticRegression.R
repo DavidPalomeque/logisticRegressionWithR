@@ -20,4 +20,4 @@ test_ds <- ds[-split, ]
 # model
 model1 <- glm(admit ~ gre + gpa + rank , train_ds , family = "binomial")
 # predict
-predict(model1 , test_ds)
+predict(model1 , test_ds , type="response")
